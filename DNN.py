@@ -1,3 +1,4 @@
+import numpy as np
 
 class DeepNetwork:
     """
@@ -60,7 +61,7 @@ class DeepNetwork:
             for i in range(1,self.lnb):
                 L[i] = self.NL(np.dot(L[i-1], self.synapses[i-1]))
 
-            # TODO backpropagation & synapses regression
+            # backpropagation & synapses regression
             L_err = [0 for i in self.lsizes]
             L_delta = [0 for i in self.lsizes]
 
